@@ -12,8 +12,7 @@ public class BaseTest {
     @BeforeMethod 
     public void setUp() {
         // Initialize the WebDriver using DriverFactory.
-        DriverFactory driverFactory = new DriverFactory();
-        driver = driverFactory.createDriver();
+        driver = DriverFactory.createDriver();
         driver.get("https://mb.io/en");
     }
 
