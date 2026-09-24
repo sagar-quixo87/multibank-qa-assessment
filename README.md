@@ -169,6 +169,56 @@ Skipped: 0
 
 All automated tests are currently passing locally and in the GitHub Actions CI pipeline.
 
+
+## Task 2 - QA Strategy & Thinking
+
+### 1. Where do you start?
+
+I will put myself into customer shoes and will try to execute the journeys/Happy paths e2e as an end user would do. During the journeys, I would get to know how a new customer journey behaves e2e and how an existing customer journey behaves. With my experience, I would be able to get the critical paths. I will put them as P0s and will structure others as P1, P2s accordingly. This way I will have clear structure and now all I have to do is, extend it with exploratory testing approach to uncover & create more scenarios and cases.
+
+From my experience, to help me out, I would love to plug network/proxy tools like Dev tools for browsers, Charles Proxy for Android & iOS. This will help me with what API requests are called on the steps I am performing and what are the responses given by backend. This will increase my product technical understanding that how system works.
+
+### 2. How would you approach testing this app?
+
+I think I covered the approach in my 1st answer. As its only 2 weeks:
+
+a. Will make myself hands-on quickly on the journeys/flows + keep proxy plugged to check backend response to enhance understanding/working.
+
+b. With my Fintech knowledge, I would focus on main areas like Registration/Log-in, KYC/Onboarding, Discovery, Deposits, Order creation, Focus on Payments/transaction flow e2e, Reconciliation, Debounce and withdrawal.
+
+### 3. What does QA look like inside a sprint, from ticket creation through to regression?
+
+Inside a sprint:
+
+a. Feature/Requirement ticket analysis
+
+b. Static tests like Walkthrough, reviews, asking/clarifying questions from Product & designs
+
+c. Test plan & design - Test data preparation, Environment setup if needed, test designing
+
+d. Test Execution, Defect reporting, Regression, Bug triage.
+
+e. If time allows, parallely plan automation checks of the same feature on API level atleast as a North Star. Otherwise atleast smoke e2e journey with the feature.
+
+### 4. What does your ideal regression suite look like?
+
+I would categorize my suite into P0/P1/P2 cases.
+
+**P0** - Smoke/Sanity/E2E tests runs on CI as quality gate.
+
+**P1** - Cover most of them via API testing/automation atleast, to make sure business logic is working.
+
+**P2** - Ideally should be covered via unit tests/acceptance tests on DEV level.
+
+### 5. What would keep you up at night about this app specifically and releasing to the public?
+
+I would say thinking mostly about how we can make sure we DON'T miss anything on E2E P0 journeys and as real money is involved, All the paths where payment transactions are involved, double down on those paths to aim for zero leakage.
+
+Also scenarios like duplicate transactions/orders, incorrect balance, network failure in between transaction and backend success but UI showing failure would be my major concerns.
+
+
+
+
 ## Author
 
 Sagar Singla
