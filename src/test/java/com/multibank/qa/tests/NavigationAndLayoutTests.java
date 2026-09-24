@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class NavigationTest extends BaseTest {
+public class NavigationAndLayoutTests extends BaseTest {
 
     // TEST#1: Test to verify that the main navigation items are displayed correctly
     // on the home page.
