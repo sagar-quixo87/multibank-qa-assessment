@@ -5,16 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverFactory {
-    // Create a new WebDriver instance.
-    public WebDriver createDriver() {
-        
-    // Set up the ChromeDriver using WebDriverManager.
-    WebDriverManager.chromedriver().setup();
-    
-    // Create a new instance of ChromeDriver.
-    WebDriver driver = new ChromeDriver();
-     driver.manage().window().maximize();
-     return driver;
-    }
 
+    public WebDriver createDriver() {
+        WebDriverManager.chromedriver().setup();
+
+        WebDriver driver = new ChromeDriver();
+
+        // Standard desktop viewport
+        driver.manage().window().maximize();
+
+        return driver;
+    }
 }
