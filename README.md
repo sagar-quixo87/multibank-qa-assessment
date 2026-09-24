@@ -217,6 +217,65 @@ I would say thinking mostly about how we can make sure we DON'T miss anything on
 Also scenarios like duplicate transactions/orders, incorrect balance, network failure in between transaction and backend success but UI showing failure would be my major concerns.
 
 
+## Test Plan for Multibank Website (for given automation assignment task)
+
+### Scope
+Focus is to cover the main public flows of MultiBank website mentioned in the assignment.
+
+### Areas Covered
+- Main navigation & links
+- Desktop viewport checks
+- Spot Market and categories
+- Marketing banner
+- App download link
+- Why MultiBank page/content
+- Invalid route handling
+- Mobile viewport basic check
+
+### Test Approach
+I have focused first on main/critical flows and then added negative/edge cases. Tests are automated using Selenium + TestNG with Page Object Model.
+
+### Browsers
+- Chrome
+- Firefox
+- Headless Chrome on CI
+
+### Entry Criteria
+- Website is accessible
+- Required pages/services are available
+- Supported browser is installed
+
+### Exit Criteria
+- All P0/critical tests are passing
+- No major blocker in tested flows
+- Cross-browser execution is successful
+
+
+## Release Readiness Checklist 
+
+Before giving QA sign-off, I would check:
+
+- [ ] All P0/critical journeys are passing
+- [ ] No open blocker/critical defects
+- [ ] Regression is completed
+- [ ] Chrome and Firefox checks are passing
+- [ ] CI build is green
+- [ ] Important links/navigation are working
+- [ ] Known issues are reviewed with Product/Dev
+- [ ] Rollback plan is available in case something goes wrong after release
+
+
+## Risk Matrix for given automation assignment task
+
+| Risk | Impact | Priority | What I would focus on |
+|---|---|---|---|
+| Main navigation/link broken | User cannot reach important pages | High | Navigation regression |
+| Spot Market not loading | Trading information unavailable | High | Market section/category checks |
+| Wrong/broken app download link | User cannot install app | High | Download link validation |
+| Important content/banner missing | Customer gets incomplete/wrong information | Medium | Content validation |
+| Browser specific issue | Feature works on one browser but fails on another | Medium | Chrome + Firefox regression |
+| Mobile viewport issue | Poor/broken experience on smaller screens | Medium | Mobile viewport checks |
+
 
 
 ## Author
